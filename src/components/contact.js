@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaWhatsapp } from 'react-icons/fa';
+import { SiLeetcode, SiGeeksforgeeks } from 'react-icons/si';
 import './contact.css';
 
 const Contact = () => {
@@ -36,6 +37,8 @@ const Contact = () => {
 
   const socialLinks = [
     { icon: FaGithub, href: 'https://github.com/AshtheDeveloper777', label: 'GitHub' },
+    { icon: SiLeetcode, href: 'https://leetcode.com/u/AkashCodesIt/', label: 'LeetCode' },
+    { icon: SiGeeksforgeeks, href: 'https://www.geeksforgeeks.org/profile/akashakao39c', label: 'GeeksforGeeks' },
     { icon: FaWhatsapp, href: `https://wa.me/${whatsappNumber}`, label: 'WhatsApp' },
   ];
 
@@ -189,7 +192,7 @@ const Contact = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <p>Copyright {new Date().getFullYear()} Akash. Built with React.</p>
+        <p>Copyright {new Date().getFullYear()} AKASH S. Built with React.</p>
       </motion.footer>
     </section>
   );

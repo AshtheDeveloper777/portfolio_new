@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaEnvelope, FaDownload, FaWhatsapp } from 'react-icons/fa';
+import { SiLeetcode, SiGeeksforgeeks } from 'react-icons/si';
 import { TypeAnimation } from 'react-type-animation';
 import './hero.css';
 
@@ -26,6 +27,8 @@ const Hero = () => {
 
   const socialLinks = [
     { icon: FaGithub, href: 'https://github.com/AshtheDeveloper777', label: 'GitHub' },
+    { icon: SiLeetcode, href: 'https://leetcode.com/u/AkashCodesIt/', label: 'LeetCode' },
+    { icon: SiGeeksforgeeks, href: 'https://www.geeksforgeeks.org/profile/akashakao39c', label: 'GeeksforGeeks' },
     { icon: FaEnvelope, href: 'mailto:akashakash95327@gmail.com?subject=Portfolio%20Contact', label: 'Email' },
     { icon: FaWhatsapp, href: 'https://wa.me/919363273831', label: 'WhatsApp' },
   ];
@@ -48,7 +51,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
           >
-            <span className="wave">👋</span> Hi, I'm
+            <span className="wave">👋</span> Hi, I'm <span className="greeting-name">AKASH S</span>
           </motion.div>
 
           <motion.h1
@@ -205,10 +208,10 @@ const Hero = () => {
               <pre>
                 <code>
 {`const developer = {
-  name: "Akash",
+  name: "AKASH S",
   role: "Full Stack Dev",
-  skills: ["Next.js", "React", "Tailwind CSS", "Python", "Flask"],
-  passion: "Building real-time apps",
+  skills: ["Next.js", "React", "Tailwind CSS", "Python"],
+  profiles: ["LeetCode", "GeeksforGeeks", "GitHub"],
   status: "Available for projects"
 };`}
                 </code>
