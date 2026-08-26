@@ -44,18 +44,18 @@ const Hero = () => {
         >
           <motion.div
             className="greeting"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
           >
-            <span className="wave">Hi,</span> I'm
+            <span className="wave">👋</span> Hi, I'm
           </motion.div>
 
           <motion.h1
-            className="her_name"
-            initial={{ opacity: 0, y: 20 }}
+            className="hero-name"
+            initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
           >
             <span className="gradient-text">Full Stack Developer</span>
           </motion.h1>

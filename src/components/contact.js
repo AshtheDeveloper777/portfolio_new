@@ -58,7 +58,7 @@ const Contact = () => {
         className="contact-container"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.05 }}
         variants={containerVariants}
       >
         <motion.div className="section-header" variants={itemVariants}>
