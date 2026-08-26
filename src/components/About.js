@@ -27,12 +27,12 @@ const About = () => {
     {
       icon: FaCode,
       title: 'Frontend Development',
-      description: 'Building responsive and interactive user interfaces with React',
+      description: 'Building responsive, high-performance web interfaces with Next.js, React, and Tailwind CSS',
     },
     {
       icon: FaServer,
       title: 'Backend Development',
-      description: 'Creating robust APIs and server-side logic with Python Flask and Java',
+      description: 'Creating robust APIs and server-side logic with Python Flask and REST APIs',
     },
     {
       icon: FaDatabase,
@@ -42,7 +42,7 @@ const About = () => {
     {
       icon: FaMobile,
       title: 'Full Stack Solutions',
-      description: 'End-to-end development from concept to deployment',
+      description: 'End-to-end web app development from concept and UI design to cloud deployment',
     },
   ];
 
@@ -108,11 +108,8 @@ const About = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
             >
-              I specialize in Python Flask for backend development, creating
-              RESTful APIs and server-side applications. On the frontend, I work
-              with React to build dynamic and responsive user interfaces. My
-              experience with Java and SQL allows me to develop comprehensive
-              solutions that are both efficient and scalable.
+              I specialize in Next.js, React, and Tailwind CSS for creating slick, responsive
+              user experiences. On the backend, I leverage Python Flask and SQL to craft fast RESTful APIs and clean application architecture.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -121,7 +118,7 @@ const About = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
             >
               I'm always eager to learn new technologies and take on challenging
-              projects that push the boundaries of what's possible.
+              projects that push the boundaries of modern web development.
             </motion.p>
 
             <motion.div
@@ -133,7 +130,7 @@ const About = () => {
             >
               <h3>Technologies I work with:</h3>
               <div className="tech-list">
-                {['Python', 'Flask', 'React', 'Java', 'SQL', 'JavaScript', 'HTML/CSS', 'Git'].map((tech, index) => (
+                {['Next.js', 'React', 'Tailwind CSS', 'Python', 'Flask', 'SQL', 'JavaScript', 'HTML/CSS', 'Git'].map((tech, index) => (
                   <motion.span
                     key={tech}
                     className="tech-tag"

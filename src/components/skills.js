@@ -2,35 +2,35 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
   FaPython,
-  FaJava,
   FaReact,
   FaDatabase,
   FaCode,
   FaServer,
+  FaPlug,
 } from 'react-icons/fa';
-import { SiFlask, SiJavascript, SiHtml5, SiCss3 } from 'react-icons/si';
+import { SiFlask, SiJavascript, SiNextdotjs, SiTailwindcss } from 'react-icons/si';
 import './Skills.css';
 
 const Skills = () => {
-  const skillCategories =[
+  const skillCategories = [
     {
-      title: 'Backend',
+      title: 'Backend & APIs',
       icon: FaServer,
       skills: [
         { name: 'Python', icon: FaPython, level: 90, color: '#3776ab' },
         { name: 'Flask', icon: SiFlask, level: 85, color: '#000000' },
-        { name: 'Java', icon: FaJava, level: 80, color: '#ed8b00' },
+        { name: 'REST APIs', icon: FaPlug, level: 90, color: '#6366f1' },
         { name: 'SQL', icon: FaDatabase, level: 85, color: '#4479a1' },
       ],
     },
     {
-      title: 'Frontend',
+      title: 'Frontend & UI',
       icon: FaCode,
       skills: [
+        { name: 'Next.js', icon: SiNextdotjs, level: 90, color: '#ffffff' },
         { name: 'React', icon: FaReact, level: 90, color: '#61dafb' },
+        { name: 'Tailwind CSS', icon: SiTailwindcss, level: 90, color: '#38bdf8' },
         { name: 'JavaScript', icon: SiJavascript, level: 85, color: '#f7df1e' },
-        { name: 'HTML5', icon: SiHtml5, level: 90, color: '#e34f26' },
-        { name: 'CSS3', icon: SiCss3, level: 85, color: '#1572b6' },
       ],
     },
   ];
@@ -149,9 +149,9 @@ const Skills = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          <h3>Additional Tools & Technologies</h3>
+          <h3>Additional Tools & Frameworks</h3>
           <div className="tools-grid">
-            {['Git', 'REST APIs', 'JSON', 'Postman', 'VS Code', 'Linux', 'Docker', 'AWS'].map((tool, index) => (
+            {['Next.js', 'Tailwind CSS', 'React', 'Git', 'REST APIs', 'Postman', 'VS Code', 'Linux', 'Docker', 'AWS'].map((tool, index) => (
               <motion.div
                 key={tool}
                 className="tool-badge"

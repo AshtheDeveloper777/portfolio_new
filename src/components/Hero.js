@@ -68,13 +68,13 @@ const Hero = () => {
           >
             <TypeAnimation
               sequence={[
-                'Python Flask Developer',
+                'Next.js Developer',
                 2000,
                 'React Specialist',
                 2000,
-                'Java Developer',
+                'Tailwind CSS Architect',
                 2000,
-                'SQL Database Expert',
+                'Python Flask Developer',
                 2000,
                 'Full Stack Engineer',
                 2000,
@@ -91,8 +91,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            I build scalable web applications and robust backend systems.
-            Passionate about creating efficient, user-friendly solutions.
+            I build modern, scalable web applications and intuitive interfaces.
+            Passionate about high-performance React ecosystem tech & sleek user experiences.
           </motion.p>
 
           <motion.div
@@ -205,10 +205,11 @@ const Hero = () => {
               <pre>
                 <code>
 {`const developer = {
-  name: "Full Stack Dev",
-  skills: ["Python", "Flask", "React", "Java", "SQL"],
-  passion: "Building amazing apps",
-  status: "Always learning"
+  name: "Akash",
+  role: "Full Stack Dev",
+  skills: ["Next.js", "React", "Tailwind CSS", "Python", "Flask"],
+  passion: "Building real-time apps",
+  status: "Available for projects"
 };`}
                 </code>
               </pre>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   FaGithub,
   FaExternalLinkAlt,
@@ -7,6 +7,7 @@ import {
   FaShoppingCart,
   FaPenNib,
   FaCoffee,
+  FaComments,
 } from 'react-icons/fa';
 import './Projects.css';
 
@@ -16,6 +17,16 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
+      title: 'Real-Time Chat App',
+      description: 'Modern real-time messaging application built with Next.js, React, and Tailwind CSS featuring interactive chat rooms, instant updates, and responsive UI.',
+      tags: ['Next.js', 'Tailwind CSS', 'React', 'WebSockets'],
+      category: 'fullstack',
+      github: 'https://github.com/AshtheDeveloper777/chat-app',
+      demo: 'https://chatappaksh.vercel.app/',
+      icon: FaComments,
+    },
+    {
+      id: 2,
       title: 'Weather App',
       description: 'React weather app with live weather search, API-powered forecasts, and a clean responsive interface.',
       tags: ['React', 'API', 'JavaScript'],
@@ -25,7 +36,7 @@ const Projects = () => {
       icon: FaCloudSun,
     },
     {
-      id: 2,
+      id: 3,
       title: 'E-Commerce Store',
       description: 'React online shop experience with product browsing, cart interactions, and a polished storefront flow.',
       tags: ['React', 'JavaScript', 'E-Commerce'],
@@ -35,7 +46,7 @@ const Projects = () => {
       icon: FaShoppingCart,
     },
     {
-      id: 3,
+      id: 4,
       title: 'Blog Post App',
       description: 'React blog platform for reading and publishing posts with a modern layout and deploy-ready routing.',
       tags: ['React', 'Blog', 'JavaScript'],
@@ -45,7 +56,7 @@ const Projects = () => {
       icon: FaPenNib,
     },
     {
-      id: 4,
+      id: 5,
       title: 'Cafe and WiFi API',
       description: 'Cafe finder web app backed by an API for discovering cafe details, WiFi availability, and useful venue info.',
       tags: ['React', 'API', 'Web App'],
@@ -145,69 +156,67 @@ const Projects = () => {
           ))}
         </motion.div>
 
-        <motion.div
-          className="projects-grid"
-          variants={containerVariants}
-          key={filter}
-        >
-          {filteredProjects.map((project, index) => {
-            const ProjectIcon = project.icon;
+        <motion.div className="projects-grid">
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project) => {
+              const ProjectIcon = project.icon;
 
-            return (
-              <motion.div
-                key={project.id}
-                className="project-card"
-                variants={itemVariants}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-              >
-                <div className="project-image">
-                  <ProjectIcon className="project-visual-icon" aria-hidden="true" />
-                  <div className="project-overlay">
-                    <motion.a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                      aria-label={`${project.title} GitHub repository`}
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <FaGithub />
-                    </motion.a>
-                    <motion.a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                      aria-label={`${project.title} live demo`}
-                      whileHover={{ scale: 1.1 }}
-                      whileTap={{ scale: 0.9 }}
-                    >
-                      <FaExternalLinkAlt />
-                    </motion.a>
+              return (
+                <motion.div
+                  key={project.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.9 }}
+                  transition={{ duration: 0.3 }}
+                  className="project-card"
+                  whileHover={{ y: -8 }}
+                >
+                  <div className="project-image">
+                    <ProjectIcon className="project-visual-icon" aria-hidden="true" />
+                    <div className="project-overlay">
+                      <motion.a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                        aria-label={`${project.title} GitHub repository`}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
+                        <FaGithub />
+                      </motion.a>
+                      <motion.a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="project-link"
+                        aria-label={`${project.title} live demo`}
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                      >
+                        <FaExternalLinkAlt />
+                      </motion.a>
+                    </div>
                   </div>
-                </div>
-                <div className="project-content">
-                  <div className="project-header">
-                    <ProjectIcon className="project-icon" />
-                    <h3>{project.title}</h3>
+                  <div className="project-content">
+                    <div className="project-header">
+                      <ProjectIcon className="project-icon" />
+                      <h3>{project.title}</h3>
+                    </div>
+                    <p className="project-description">{project.description}</p>
+                    <div className="project-tags">
+                      {project.tags.map((tag) => (
+                        <span key={tag} className="project-tag">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                  <p className="project-description">{project.description}</p>
-                  <div className="project-tags">
-                    {project.tags.map((tag) => (
-                      <span key={tag} className="project-tag">
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </motion.div>
-            );
-          })}
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
         </motion.div>
       </motion.div>
     </section>
