@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaEnvelope, FaDownload, FaWhatsapp } from 'react-icons/fa';
 import { SiLeetcode, SiGeeksforgeeks } from 'react-icons/si';
