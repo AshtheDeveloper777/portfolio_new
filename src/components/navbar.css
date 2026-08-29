@@ -1,4 +1,4 @@
-.navbar {
+﻿.navbar {
   position: fixed;
   top: 0;
   width: 100%;
@@ -91,6 +91,10 @@
 }
 
 @media (max-width: 768px) {
+  .nav-container {
+    padding: 0 16px;
+  }
+
   .mobile-menu-icon {
     display: flex;
     align-items: center;
@@ -100,7 +104,7 @@
   .nav-menu {
     position: fixed;
     left: 0;
-    top: 65px;
+    top: 60px;
     right: 0;
     flex-direction: column;
     background: rgba(11, 15, 25, 0.96);
@@ -112,9 +116,11 @@
     transform: translateY(-150%);
     opacity: 0;
     pointer-events: none;
-    padding: 2rem 1.5rem;
+    padding: 1.75rem 1.25rem;
     gap: 1.25rem;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    max-height: calc(100vh - 60px);
+    overflow-y: auto;
   }
 
   .nav-menu.active {

@@ -1,4 +1,4 @@
-.projects {
+﻿.projects {
   padding: 100px 24px;
   position: relative;
 }
@@ -44,7 +44,7 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 2.25rem;
 }
 
@@ -185,16 +185,17 @@
 
 @media (max-width: 768px) {
   .projects {
-    padding: 70px 16px;
+    padding: 60px 16px;
   }
 
   .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
   }
 
   .filter-buttons {
     gap: 0.5rem;
+    margin-bottom: 2rem;
   }
 
   .filter-btn {
@@ -202,10 +203,19 @@
     font-size: 0.88rem;
   }
 
-  /* Keep links visible on mobile touch without hover if user taps card */
   .project-overlay {
     opacity: 0.95;
     background: rgba(11, 15, 25, 0.75);
     backdrop-filter: blur(4px);
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-content {
+    padding: 1.35rem;
   }
 }

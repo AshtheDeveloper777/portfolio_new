@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaEnvelope, FaDownload, FaWhatsapp } from 'react-icons/fa';
 import { SiLeetcode, SiGeeksforgeeks } from 'react-icons/si';
@@ -210,9 +210,16 @@ const Hero = () => {
 {`const developer = {
   name: "AKASH S",
   role: "Full Stack Dev",
-  skills: ["Next.js", "React", "Tailwind CSS", "Python"],
-  profiles: ["LeetCode", "GeeksforGeeks", "GitHub"],
-  status: "Available for projects"
+  skills: [
+    "Next.js", "React",
+    "Tailwind", "Python"
+  ],
+  profiles: [
+    "LeetCode",
+    "GeeksforGeeks",
+    "GitHub"
+  ],
+  status: "Available"
 };`}
                 </code>
               </pre>

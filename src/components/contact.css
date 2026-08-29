@@ -1,7 +1,7 @@
-.contact {
+﻿.contact {
   padding: 100px 24px 60px;
   position: relative;
-  background: radial-gradient(circle at 50% 80%, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 100%, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
 }
 
 .contact-container {
@@ -10,13 +10,10 @@
 }
 
 .contact-description {
-  text-align: center;
   font-size: clamp(1rem, 1.8vw, 1.15rem);
   color: var(--text-secondary);
   margin-bottom: 3.5rem;
   max-width: 620px;
-  margin-left: auto;
-  margin-right: auto;
   line-height: 1.8;
 }
 
@@ -24,29 +21,28 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.5rem;
-  margin-bottom: 4rem;
+  align-items: start;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .info-card {
   background: var(--dark-card);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 1.75rem 2rem;
-  border-radius: 18px;
   border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 1.75rem 2rem;
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  cursor: pointer;
-  color: inherit;
   text-decoration: none;
+  color: inherit;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .info-card:hover {
@@ -59,7 +55,7 @@
   width: 56px;
   height: 56px;
   background: var(--gradient-primary);
-  border-radius: 14px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,18 +74,11 @@
   letter-spacing: 0.5px;
 }
 
-.info-content a,
-.info-content p,
 .info-content span {
   font-size: 1.1rem;
   color: var(--text-primary);
-  text-decoration: none;
   font-weight: 600;
   word-break: break-word;
-}
-
-.info-content a:hover {
-  color: var(--primary-color);
 }
 
 .contact-actions {
@@ -170,15 +159,30 @@
 
 @media (max-width: 576px) {
   .contact {
-    padding: 70px 16px 40px;
+    padding: 60px 16px 30px;
+  }
+
+  .contact-description {
+    margin-bottom: 2rem;
   }
 
   .info-card {
-    padding: 1.25rem 1.5rem;
+    padding: 1.25rem 1.25rem;
+    gap: 1rem;
+  }
+
+  .info-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 1.2rem;
+  }
+
+  .info-content span {
+    font-size: 0.95rem;
   }
 
   .contact-actions {
-    padding: 1.75rem 1.25rem;
+    padding: 1.5rem 1.25rem;
   }
 
   .social-buttons {
@@ -188,5 +192,9 @@
   .social-button {
     width: 100%;
     justify-content: center;
+  }
+
+  .footer {
+    margin-top: 2.5rem;
   }
 }
