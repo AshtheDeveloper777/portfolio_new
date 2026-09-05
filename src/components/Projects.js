@@ -62,7 +62,7 @@ const Projects = () => {
       tags: ['React', 'API', 'Web App'],
       category: 'fullstack',
       github: 'https://github.com/AshtheDeveloper777/cafe_api-web',
-      demo: 'https://cafeapiweb.vercel.app/',
+      demo: 'https://cafe-apiaksh.vercel.app/',
       icon: FaCoffee,
     },
   ];
